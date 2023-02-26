@@ -129,6 +129,7 @@ function LoginEn({ login, changLang, lang }) {
                                                         type="checkbox"
                                                         id="check-box"
                                                         name="check-box"
+                                                        {...register("checkbox", {})}
                                                     />
                                                 </div>
                                                 <label
