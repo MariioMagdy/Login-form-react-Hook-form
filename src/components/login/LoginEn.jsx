@@ -9,12 +9,10 @@ function LoginEn({ login, changLang, lang }) {
         formState,
         reset,
         trigger,
-        isSubmitting,
-        watch,
-    } = useForm({});
+    } = useForm();
 
     const onSubmit = (data) => {
-        alert(JSON.stringify(data));
+        console.log(data);
         reset();
     };
 
