@@ -14,7 +14,7 @@ function LoginEn({ login, changLang, lang }) {
     } = useForm({});
 
     const onSubmit = (data) => {
-        console.log(data);
+        alert(JSON.stringify(data));
         reset();
     };
 
@@ -51,10 +51,12 @@ function LoginEn({ login, changLang, lang }) {
                                 </picture>
                             </div>
                             <div className="login-rightSide d-flex flex-column justify-content-center text-start col-lg-6 col-sm-12">
-                                <div className="p-4 watch-responsive">
+                                <div className="p-3 watch-responsive">
                                     <div>
                                         <div className="d-flex justify-content-between watch-responsive">
-                                            <h4>Welcome Back!</h4>
+                                            <h4 className="d-flex align-items-end">
+                                                Welcome Back!
+                                            </h4>
                                             <span
                                                 className="fw-bold lang"
                                                 onClick={changLang}
@@ -65,7 +67,7 @@ function LoginEn({ login, changLang, lang }) {
                                         <h6>Login to continue</h6>
                                     </div>
                                     <form onSubmit={handleSubmit(onSubmit)} method="POST">
-                                        <div className="login-inputs d-flex flex-column gap-3 mb-3 ">
+                                        <div className="login-inputs d-flex flex-column gap-2 mb-3 ">
                                             <div className="input-field d-flex justify-content-center align-items-center">
                                                 <span className="icon-user"></span>
                                                 <input
@@ -73,7 +75,6 @@ function LoginEn({ login, changLang, lang }) {
                                                         errors.email &&
                                                         "border border-danger"
                                                     }
-                                                    autoFocus
                                                     placeholder="Write your Email"
                                                     name="email"
                                                     {...register("email", {

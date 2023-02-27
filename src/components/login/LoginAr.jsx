@@ -14,7 +14,7 @@ function LoginAr({ login, changLang, lang }) {
     } = useForm({});
 
     const onSubmit = (data) => {
-        console.log(data);
+        alert(JSON.stringify(data));
         reset();
     };
 
@@ -56,7 +56,9 @@ function LoginAr({ login, changLang, lang }) {
                                 <div className="p-4 watch-responsive">
                                     <div>
                                         <div className="d-flex justify-content-between watch-responsive">
-                                            <h4>مرحبًا بعودتك!</h4>
+                                            <h4 className="d-flex align-items-end">
+                                                مرحبًا بعودتك!
+                                            </h4>
                                             <span
                                                 className="fw-bold lang"
                                                 onClick={changLang}
@@ -67,7 +69,7 @@ function LoginAr({ login, changLang, lang }) {
                                         <h6 className="text-end">سجل الدخول للمتابعة</h6>
                                     </div>
                                     <form onSubmit={handleSubmit(onSubmit)} method="POST">
-                                        <div className="login-inputs d-flex flex-column gap-3 mb-3 ">
+                                        <div className="login-inputs d-flex flex-column gap-2 mb-3 ">
                                             <div className="input-field d-flex justify-content-center align-items-center">
                                                 <span className="icon-user"></span>
                                                 <input

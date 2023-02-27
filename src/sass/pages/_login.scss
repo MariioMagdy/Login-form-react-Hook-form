@@ -89,7 +89,7 @@ a {
             button {
                 background-color: var(--clr-bg-main);
                 color: var(--clr-heading-900);
-                padding: 0.8rem 2.5rem;
+                padding: 0.9rem 3.2rem;
                 font-size: 0.9rem;
                 font-weight: bold;
                 border-radius: 3px;
@@ -101,8 +101,8 @@ a {
                 appearance: none;
                 background-color: #fff;
                 border-radius: 1px;
-                width: 17px;
-                height: 17px;
+                width: 15px;
+                height: 15px;
                 display: grid;
                 place-content: center;
                 border: 1px solid var(--clr-bg-main);
@@ -114,8 +114,8 @@ a {
                 &::before {
                     content: "";
                     background-color: CanvasText;
-                    width: 0.65em;
-                    height: 0.65em;
+                    width: 0.6em;
+                    height: 0.6em;
                     color: #fff;
                     transform: scale(0);
                     transition: 120ms transform ease-in-out;
@@ -164,10 +164,10 @@ a {
         input {
             outline-color: var(--clr-bg-main);
             border: 1px solid var(--clr-bg-main);
-            padding: 8px 40px;
+            padding: 10px 40px;
             border-radius: 2px;
             &[type="password"] {
-                padding: 12px 40px 5px 40px;
+                padding: 14px 40px 5px 40px;
             }
         }
         .input-field,
@@ -181,18 +181,26 @@ a {
     }
     .footer {
         background-color: var(--clr-login-details);
+        gap: 10rem;
         span {
             display: inline-block;
             color: var(--clr-logo);
             font-size: 0.8125rem;
         }
     }
-    &-newUser a {
-        color: var(--clr-logo);
+    &-newUser {
+        width: 200px;
+        margin: 0 auto;
+        a {
+            color: var(--clr-logo);
+        }
     }
+
     &-linkColor a,
     &-linkColor {
         color: var(--clr-logo);
+        font-size: 0.8125rem;
+        font-weight: 500;
     }
     @media (max-width: 620px) {
         & {
